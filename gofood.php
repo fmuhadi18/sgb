@@ -54,6 +54,7 @@ $tools = trim(fgets(STDIN));
 					echo $claims->data->message;
 					$xx = array('Content-Type: application/x-www-form-urlencoded');
 					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
+					echo "\nAccount has been successfully filled GOPAY Rp.10";
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual :)");
 					}
@@ -93,6 +94,7 @@ $tools = trim(fgets(STDIN));
 					echo $claims->data->message;
 					$xx = array('Content-Type: application/x-www-form-urlencoded');
 					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
+					echo "\nAccount has been successfully filled GOPAY Rp.10";
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual :)");
 					}
