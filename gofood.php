@@ -52,6 +52,8 @@ $tools = trim(fgets(STDIN));
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
 					echo $claims->data->message;
+					$xx = array('Content-Type: application/x-www-form-urlencoded');
+					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual :)");
 					}
@@ -89,6 +91,8 @@ $tools = trim(fgets(STDIN));
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
 					echo $claims->data->message;
+					$xx = array('Content-Type: application/x-www-form-urlencoded');
+					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual :)");
 					}
