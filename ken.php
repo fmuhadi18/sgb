@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-// Created By : Gidhan Bagus Algary
+// Created By : ken wisnoe
 
 // Header
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
@@ -13,7 +13,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 // Menu
 echo "\n=======================\n";
 echo "      GOFOOD Tools\n";
-echo "    By : Gidhan B.A\n";
+echo "    By : ken wisnoe\n";
 echo "=======================\n";
 echo "1. Register (Akun Baru)\n";
 echo "2. Login (Akun Lama)\n";
@@ -51,7 +51,7 @@ $tools = trim(fgets(STDIN));
 				// Claim Voucher
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
-				$data3 = '{"promo_code":"GOFOODHEMAT1"}';
+				$data3 = '{"promo_code":"GOFOOD022620A"}';
 				$claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
@@ -95,7 +95,7 @@ $tools = trim(fgets(STDIN));
 				// Claim Voucher
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
-				$data3 = '{"promo_code":"GOFOODHEMAT1"}';
+				$data3 = '{"promo_code":"GOFOOD022620A"}';
 				$claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
